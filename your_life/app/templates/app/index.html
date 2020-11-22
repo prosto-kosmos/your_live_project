@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Главная {% endblock %}
+
+{% block menu %}
+<ul class="rd-navbar-nav">
+  <li class="rd-nav-item active"><a class="rd-nav-link" href="{% url "index_url" %}">Главная</a>
+  </li>
+  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url "calculation_url" %}">Расчет</a>
+  </li>
+  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url "grath_url" %}">Графики</a>
+  </li>
+  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url "analysis_url" %}">Анализ</a>
+  </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<!-- Swiper-->
+<section class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2"
+  data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="false" data-direction="vertical">
+  <div class="swiper-wrapper text-left">
+    <div class="swiper-slide context-dark" data-slide-bg="{% static "images/my/top_dark_1.jpg" %}">
+      <div class="swiper-slide-caption section-md">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10">
+              <h6 class="text-uppercase" style="color: #ffffff;" data-caption-animate="fadeInRight"
+                data-caption-delay="0">Раскрой магию чисел по дате свего рождения</h6>
+              <h2 class="oh font-weight-light" style="color: #ffffff;" data-caption-animate="slideInUp"
+                data-caption-delay="100"><span>Расчитай</span>
+                <p><span class="font-weight-bold"> КОД ЖИЗНИ!</span></p>
+              </h2>
+              <a class="button button-default-outline button-ujarak" style="color: #ffffff;" href="{% url "calculation_url" %}"
+                data-caption-animate="fadeInLeft" data-caption-delay="0">Перейти к расчету</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide context-dark" data-slide-bg="{% static "images/my/top_dark_2.jpg" %}">
+      <div class="swiper-slide-caption section-md">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10">
+              <h6 class="text-uppercase" style="color: #ffffff;" data-caption-animate="fadeInRight"
+                data-caption-delay="0"> Получи наглядное представление своего жизненного пути</h6>
+              <h2 class="oh font-weight-light" style="color: #ffffff;" data-caption-animate="slideInUp"
+                data-caption-delay="100"><span>Построй графики </span>
+                <p><span class="font-weight-bold"> ЖИЗНИ, УДАЧИ И ЗДОРОВЬЯ</span></p>
+              </h2>
+              <a class="button button-default-outline button-ujarak" style="color: #ffffff;" href="{% url "grath_url" %}"
+                data-caption-animate="fadeInLeft" data-caption-delay="0">Перейти к построению</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide context-dark" data-slide-bg="{% static "images/my/top_dark_3.jpg" %}">
+      <div class="swiper-slide-caption section-md">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10">
+              <h6 class="text-uppercase" style="color: #ffffff;" data-caption-animate="fadeInRight"
+                data-caption-delay="0">Воспользуйся интерпритатором для получения рекомендаций из исходных значений</h6>
+              <h2 class="oh font-weight-light" style="color: #ffffff;" data-caption-animate="slideInUp"
+                data-caption-delay="100"><span>Получи результаты</span>
+                <p><span class="font-weight-bold"> АНАЛИЗА</span></p>
+              </h2>
+              <a class="button button-default-outline button-ujarak" style="color: #ffffff;" href="{% url "analysis_url" %}"
+                data-caption-animate="fadeInLeft" data-caption-delay="0">Получить</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Swiper Pagination-->
+  <div class="swiper-pagination"></div>
+</section>
+
+<!-- Discover New Horizons-->
+<section class="section section-sm section-first text-md-left">
+  <div class="container">
+    <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+      <div class="col-lg-6 text-center wow fadeInUp"><img src="{% static "images/my/index1.jpg" %}" alt="" width="556"
+          height="382" />
+      </div>
+      <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
+        <div class="box-width-lg-470">
+          <h3>Познай себя за три простых шага</h3>
+          <!-- Bootstrap tabs-->
+          <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big tabs-line-style-2 text-center text-md-left"
+            id="tabs-7">
+            <!-- Nav tabs-->
+            <ul class="nav nav-tabs">
+              <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-7-1"
+                  data-toggle="tab">Расчет</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-7-2" data-toggle="tab">Графики</a>
+              </li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-7-3" data-toggle="tab">Анализ</a>
+              </li>
+            </ul>
+            <!-- Tab panes-->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tabs-7-1">
+                <p>Блок краткого описания процесса расчета</p>
+                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk"
+                    href="{% url "calculation_url" %}">Перейти к расчету</a><a class="button button-black-outline button-md"
+                    href="#">Больше</a></div>
+              </div>
+              <div class="tab-pane fade" id="tabs-7-2">
+                <p>Блок краткого описания графиков</p>
+                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk"
+                    href="{% url "grath_url" %}">Перейти к построению</a><a class="button button-black-outline button-md"
+                    href="#">Больше</a></div>
+              </div>
+              <div class="tab-pane fade" id="tabs-7-3">
+                <p>Блок краткого описания методики анализа</p>
+                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk"
+                    href="{% url "analysis_url" %}">Получить</a><a class="button button-black-outline button-md" href="#">Больше</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
